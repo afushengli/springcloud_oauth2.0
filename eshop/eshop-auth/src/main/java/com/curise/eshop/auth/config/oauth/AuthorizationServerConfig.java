@@ -61,17 +61,17 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
        // clients.withClientDetails(clientDetails());
         clients.inMemory()
-                .withClient("android")
+                .withClient("android")  //clientId  客户端端id
                 .scopes("read")
                 .secret("android")
-                .authorizedGrantTypes("password", "authorization_code", "refresh_token")
+                .authorizedGrantTypes("password", "authorization_code", "refresh_token")       //授权方式   authorization_code  授权码    refresh_token 可以刷新
                 .and()
                 .withClient("webapp")
                 .scopes("read")
-                .authorizedGrantTypes("implicit")
+                .authorizedGrantTypes("implicit") //implicit  隐藏式
                 .and()
                 .withClient("browser")
-                .authorizedGrantTypes("refresh_token", "password")
+                .authorizedGrantTypes("refresh_token", "password")   //password  密码式
                 .scopes("read");
     }
     @Bean

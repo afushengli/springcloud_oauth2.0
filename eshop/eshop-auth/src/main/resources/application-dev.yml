@@ -6,9 +6,9 @@ spring:
     name: eshop-auth
   redis:
     database: 0
-    host: 192.168.0.117
+    host: 127.0.0.1
     port: 6379
-    password:
+    password: 123456
     jedis:
       pool:
         max-active: 8
@@ -18,7 +18,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/eshop_member?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowMultiQueries=true
     username: root
-    password: root
+    password: ebid$2018
   druid:
     initialSize: 5 #初始化连接大小
     minIdle: 5     #最小连接池数量

@@ -18,4 +18,4 @@ security:
     resource:
       id: eshop-member
       user-info-uri: http://localhost:1202/auth/api/member
-      prefer-token-info: false
+      prefer-token-info: 1201
